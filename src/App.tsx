@@ -1,19 +1,21 @@
-
-import './App.css'
+import './App.css';
+import RegisterForm from './components/RegisterForm.tsx';
 
 function App() {
+  const handleRegisterSubmit = (value: object) => {
+    alert(value);
+  };
+
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <RegisterForm
+          onSubmit={handleRegisterSubmit}
+          theme='dark'
+        />
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
