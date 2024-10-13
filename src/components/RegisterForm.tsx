@@ -32,7 +32,7 @@ const RegisterForm = ({
       nickname: nicknameRef.current?.value || '',
     };
 
-    console.log(formValue);
+    onSubmit(formValue);
   };
 
   return (
