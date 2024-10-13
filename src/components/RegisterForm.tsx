@@ -24,13 +24,15 @@ const RegisterForm = ({
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    // TODO: 유효성검사
+
     const formValue = {
       id: idRef.current?.value || '',
-      password: passwordCheckRef.current?.value || '',
+      password: passwordRef.current?.value || '',
       nickname: nicknameRef.current?.value || '',
     };
 
-    onSubmit(formValue);
+    console.log(formValue);
   };
 
   return (
@@ -55,7 +57,7 @@ const RegisterForm = ({
         )}
         <input
           ref={nicknameRef}
-          placeholder='이름을 입력해주세요'
+          placeholder='닉네임을 입력해주세요'
         />
         <button>가입하기</button>
       </form>
